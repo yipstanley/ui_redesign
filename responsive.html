@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 	<head>
 		<title>Antonio's Pizza Providence</title>
 		<link rel="stylesheet" href="style.css">
@@ -6,8 +6,8 @@
 
 	<body>
 		<div id="mainNavBar">
-			<img width="200" height="50" />
-			<div class="mainNavBarItem">
+			<img width="150" src="antonios.gif" />
+			<div class="mainNavBarItem" id="isSelected">
 				<p>
 					Order Online
 				</p>
@@ -47,7 +47,7 @@
 		<div id="outerContainer">
 			<div id="mainContentContainer">
 				<div id="subNavBar">
-					<div class="subNavBarItem">
+					<div class="subNavBarItem" id="isBrowsing">
 						<p>
 							Browse All
 						</p>
@@ -78,13 +78,91 @@
 						</p>
 					</div>
 				</div>
+				
+				<div id="metaContainer">
+					<div id="back">< Back</div>
+					
+					<select id="filter">
+						<option>Filter By</option>
+					</select>
+					
+					<input id="search" type=text value="Find your favorite pizza" />
+				</div>
+				
 				<div id="pizzaContainer">
-					<script src="javascript.js"></script>
+					<script src="pizzaMenu.js"></script>
+				</div>
+					
+				<div id="checkoutFooter">
+					CHECKOUT
 				</div>
 			</div>
 
 			<div id="sideBar">
+				<div id="sideBarLabel">
+					<div>My Order:</div>
+				</div>
+				<div id="orderItems">
+					<script src="ordered.js"></script>
+				</div>
+				<div id="subtotal">
+					<div id="subtotalLabel">
+						SUBTOTAL:
+					</div>
+					<div id="subtotalCost">
+						$35.55
+					</div>
+				</div>
 				
+				<div id="storeLabel">My Store:</div>
+				<select id="store">
+					<option>Providence, Rhode Island</option>
+				</select>
+				
+				<div id="loginContainer">
+					<button class="joinButton">
+						LOG IN
+					</button>
+					<button class="joinButton">
+						CREATE AN ACCOUNT
+					</button>
+				</div>
+				
+				<div id="addressContainer">
+					<div id="addressLabel">
+						My Address:
+					</div>
+					<div id="changeAddress">
+						(CHANGE)
+					</div>
+					<div id="address">
+						1234 Pizza Avenue
+						<br />
+						Providence, Rhode Island 02912
+					</div>
+				</div>
+				
+				<div id="serviceMethodContainer">
+					<div id="serviceMethodLabel">
+						Service Method:
+					</div>
+					<div id="serviceMethodChooser">
+						<div id="delivery">
+							<input type=radio>
+								Delivery
+							</input>
+						</div>
+						<div id="carryout">
+							<input type=radio>
+								Carry-Out
+							</input>
+						</div>
+					</div>
+				</div>
+				
+				<button id="checkoutButton">
+					CHECKOUT
+				</button>
 			</div>
 		</div>
 	</body>
